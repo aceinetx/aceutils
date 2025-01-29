@@ -1,3 +1,6 @@
+;; aceutils
+;; Copyright (c) aceinetx 2022-2025
+;; License: GPL-2.0
 SYS_WRITE = 1
 SYS_OPEN = 2
 SYS_CLOSE = 3
