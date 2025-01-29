@@ -1,4 +1,4 @@
-EXECUTABLES = rd md pwd touch yes no rm cat uname true false
+EXECUTABLES = rd md pwd touch yes no rm cat uname true false echo
 
 all: $(EXECUTABLES)
 clean:
@@ -36,3 +36,7 @@ true: true.s aceutils.inc
 
 false: false.s aceutils.inc
 	fasm false.s
+
+echo: echo.s aceutils.inc strlen.inc
+	fasm echo.s
+
