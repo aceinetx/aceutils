@@ -1,4 +1,4 @@
-EXECUTABLES = rd md pwd touch yes no rm cat uname
+EXECUTABLES = rd md pwd touch yes no rm cat uname true false
 
 all: $(EXECUTABLES)
 clean:
@@ -30,3 +30,9 @@ cat: cat.s aceutils.inc
 
 uname: uname.s aceutils.inc
 	fasm uname.s
+
+true: true.s aceutils.inc
+	fasm true.s
+
+false: false.s aceutils.inc
+	fasm false.s
