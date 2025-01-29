@@ -1,5 +1,5 @@
 # aceutils
-A Non-Full gnu coreutils implemented completely in x64 assembly
+A Non-Full GNU coreutils implemented completely in x64 assembly
 
 Uses the flat assembler with ELF64 format, which gives extermely small executables
 

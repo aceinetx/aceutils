@@ -7,7 +7,6 @@ include 'strlen.inc'
 
 entry _start
 _start:
-
 	mov rbx, 16
 .loop:
 	mov rsi, [rsp+rbx]
