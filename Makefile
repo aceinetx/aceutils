@@ -1,4 +1,4 @@
-EXECUTABLES = rd md pwd touch yes no rm cat uname true false echo exsleep
+EXECUTABLES = rd md pwd touch yes no rm cat uname true false echo exsleep seq
 
 all: $(EXECUTABLES)
 clean:
@@ -42,4 +42,8 @@ echo: echo.s aceutils.inc strlen.inc
 
 exsleep: exsleep.s aceutils.inc atoi.inc
 	fasm exsleep.s
+
+seq: seq.s aceutils.inc atoi.inc
+	fasm seq.s
+
 
