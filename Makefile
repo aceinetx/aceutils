@@ -1,4 +1,4 @@
-EXECUTABLES = rd md pwd touch yes no rm
+EXECUTABLES = rd md pwd touch yes no rm cat uname
 
 all: $(EXECUTABLES)
 clean:
@@ -24,3 +24,9 @@ no: no.s aceutils.inc
 
 rm: rm.s aceutils.inc
 	fasm rm.s
+
+cat: cat.s aceutils.inc
+	fasm cat.s
+
+uname: uname.s aceutils.inc
+	fasm uname.s
