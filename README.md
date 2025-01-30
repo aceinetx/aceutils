@@ -1,7 +1,7 @@
 # aceutils
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/aceinetx/aceutils/makefile.yml)
 ![GitHub Top Language](https://img.shields.io/github/languages/top/aceinetx/aceutils)
-![GitHub Last Commit](https://img.shields.io/gitea/last-commit/aceinetx/aceutils)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/aceinetx/aceutils)
 
 A Non-Full GNU coreutils implemented completely in x64 assembly
 
