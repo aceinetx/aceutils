@@ -6,6 +6,4 @@ include 'aceutils.inc'
 
 entry _start
 _start:
-	mov rax, SYS_EXIT
-	mov rdi, 0
-	syscall
+	quit
