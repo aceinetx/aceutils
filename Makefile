@@ -43,7 +43,7 @@ echo: echo.s aceutils.inc strlen.inc
 exsleep: exsleep.s aceutils.inc atoi.inc
 	fasm exsleep.s
 
-seq: seq.s aceutils.inc atoi.inc
+seq: seq.s aceutils.inc atoi.inc itoa.inc memset.inc
 	fasm seq.s
 
 
