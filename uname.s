@@ -54,4 +54,4 @@ _start:
 	quit
 
 _newline: db 10
-utsname: rb 390
+utsname: rb (__NEW_UTS_LEN*6)+6
