@@ -1,5 +1,6 @@
 # aceutils
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/aceinetx/aceutils/makefile.yml)
+![GitHub Languages](https://img.shields.io/github/languages/count/aceinetx/aceutils)
 
 A Non-Full GNU coreutils implemented completely in x64 assembly
 
