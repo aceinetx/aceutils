@@ -7,6 +7,7 @@ include 'atoi.inc'
 
 entry _start
 _start:
+	;; quit if one of the arguments are not provided
 	mov rsi, [rsp+16]
 	cmp rsi, 0
 	je .quit
@@ -14,13 +15,15 @@ _start:
 	cmp rsi, 0
 	je .quit
 
+	;; get number from first string
 	mov rsi, [rsp+16]
 	call aceutils_atoi
-	mov [rqtp], rax
+	mov [rqtp], rax ;; store into second
 
+	;; get number from second string
 	mov rsi, [rsp+24]
 	call aceutils_atoi
-	mov [rqtp+8], rax
+	mov [rqtp+8], rax ;; store into nanoseconds
 
 	mov rax, SYS_NANOSLEEP
 	mov rdi, rqtp

@@ -8,12 +8,12 @@ cat:
 	push rbx
 	push rdi
 
-	mov rax, SYS_OPEN
+	mov rax, SYS_OPEN ;; open the file
 	xor rsi, rsi
 	xor rdx, rdx
 	syscall
 
-	test rax, rax
+	test rax, rax ;; quit if failed to read the file
 	js .quit
 
 	mov rbx, rax

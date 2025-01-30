@@ -26,7 +26,7 @@ entry _start
 _start:
 	mov rax, SYS_NEWUNAME
 	mov rdi, utsname
-	syscall
+	syscall ;; get uname
 
 	mov rbx, 0
 .loop:

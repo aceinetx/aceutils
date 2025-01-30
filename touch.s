@@ -13,8 +13,8 @@ _start:
 	je .quit
 
 	mov rax, SYS_OPEN
-	mov rsi, 0x241
-	mov rdx, 0644o
+	mov rsi, 0x241 ;; default permissions
+	mov rdx, 0644o ;; -
 	syscall
 
 	mov rdi, rax

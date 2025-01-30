@@ -13,10 +13,10 @@ aceutils_atoi:
 .loop:
 	mov dl, [rsi]
 	cmp dl, 0
-	je .quit
+	je .quit ;; Quit if eol reached
 
 	movsx rbx, dl
-	sub rbx, '0'
+	sub rbx, '0' ;; get as number
 
 	imul rax, 10
 	add rax, rbx

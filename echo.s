@@ -18,12 +18,12 @@ _start:
 
 	mov rax, SYS_WRITE
 	mov rdi, 1
-	syscall
+	syscall ;; print the string
 
 	mov rax, SYS_WRITE
 	mov rdx, 1
 	mov rsi, space
-	syscall
+	syscall ;; print space
 
 	add rbx, 8
 

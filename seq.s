@@ -9,7 +9,6 @@ include 'itoa.inc'
 
 entry _start
 _start:
-
 	mov rsi, [rsp+16]
 	cmp rsi, 0
 	je .quit
@@ -26,23 +25,23 @@ _start:
 	mov rax, s
 	mov rdx, 32
 	mov rbx, 0
-	call aceutils_memset
+	call aceutils_memset ;; clear the buffer before using
 
 	mov rax, [j]
 	mov rsi, s
 	mov rdx, 32
-	call aceutils_itoa
+	call aceutils_itoa ;; convert the number to a string
 
 	mov rax, SYS_WRITE
 	mov rdi, 1
 	mov rsi, s
 	mov rdx, 32
-	syscall
+	syscall ;; print the number
 
 	mov rax, SYS_WRITE
 	mov rsi, newl
 	mov rdx, 1
-	syscall
+	syscall ;; print newline
 
 	inc qword [j]
 	jmp .loop

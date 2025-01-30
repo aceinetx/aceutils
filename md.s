@@ -13,7 +13,7 @@ _start:
 	je .quit
 
 	mov rax, SYS_MKDIR
-	mov rsi, 0777o
+	mov rsi, 0777o ;; default permissions
 	syscall
 
 	add rbx, 8

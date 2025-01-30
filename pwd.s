@@ -11,19 +11,19 @@ _start:
 	mov rax, SYS_GETCWD
 	mov rdi, path
 	mov rsi, PATH_SIZE
-	syscall
+	syscall ;; get current working directory
 
 	mov rax, SYS_WRITE
 	mov rdi, 1
 	mov rsi, path
 	mov rdx, PATH_SIZE
-	syscall
+	syscall ;; print it
 
 	mov rax, SYS_WRITE
 	mov rdi, 1
 	mov rsi, n
 	mov rdx, 1
-	syscall
+	syscall ;; print newline
 
 	quit
 
