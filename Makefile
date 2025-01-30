@@ -1,4 +1,4 @@
-EXECUTABLES = rd md pwd touch yes no rm cat uname true false echo exsleep seq
+EXECUTABLES = rd md pwd touch yes no rm cat uname true false echo exsleep seq arch
 
 all: $(EXECUTABLES)
 clean:
@@ -48,4 +48,6 @@ exsleep: exsleep.s aceutils.inc atoi.inc
 seq: seq.s aceutils.inc atoi.inc itoa.inc memset.inc
 	fasm seq.s
 
+arch: arch.s aceutils.inc
+	fasm arch.s
 
