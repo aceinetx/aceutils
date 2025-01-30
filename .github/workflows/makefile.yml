@@ -24,7 +24,7 @@ jobs:
         rm *.s
         rm *.inc
         rm Makefile
-        zip aceutils.zip *
+        zip -X aceutils.zip *
       
     - name: Upload artifact
       uses: actions/upload-artifact@v3
