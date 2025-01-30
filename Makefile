@@ -1,4 +1,4 @@
-EXECUTABLES = rd md pwd touch yes no rm cat uname true false echo exsleep seq arch gettime kill
+EXECUTABLES = rd md pwd touch yes no rm cat uname true false echo exsleep seq arch gettime kill sync
 
 all: $(EXECUTABLES)
 clean:
@@ -56,3 +56,6 @@ gettime: gettime.s aceutils.inc itoa.inc
 
 kill: kill.s aceutils.inc atoi.inc signal.inc
 	fasm kill.s
+
+sync: aceutils.inc
+	fasm sync.s
