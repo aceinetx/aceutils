@@ -24,6 +24,9 @@ jobs:
         rm *.s
         rm *.inc
         rm Makefile
+        chmod +x *
+        chmod -x README.md
+        chmod -x LICENSE
         tar czvf aceutils.tar.gz *
       
     - name: Upload artifact
