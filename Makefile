@@ -57,5 +57,5 @@ gettime: gettime.s aceutils.inc itoa.inc
 kill: kill.s aceutils.inc atoi.inc signal.inc
 	fasm kill.s
 
-sync: aceutils.inc
+sync: sync.s aceutils.inc
 	fasm sync.s
