@@ -19,8 +19,9 @@ _start:
 	inc qword [j]
 
 .loop:
-	cmp qword [i], 1
-	jl .quit
+	mov r8, qword [i]
+	cmp qword [j], r8
+	jg .quit
 
 	mov rax, s
 	mov rdx, 32
@@ -43,7 +44,6 @@ _start:
 	mov rdx, 1
 	syscall
 
-	dec qword [i]
 	inc qword [j]
 	jmp .loop
 
@@ -51,6 +51,6 @@ _start:
 	quit
 
 newl: db 10
-i: rq 1
 j: rq 1
+i: rq 1
 s: rb 32
