@@ -16,7 +16,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt install fasm make zip
+        sudo apt install fasm
         
     - name: Build
       run: |
@@ -24,13 +24,13 @@ jobs:
         rm *.s
         rm *.inc
         rm Makefile
-        zip -X aceutils.zip *
+        tar czvf aceutils.tar.gz *
       
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: aceutils-artifact
-        path: aceutils.zip
+        path: aceutils.tar.gz
       
   publish:
     name: Publish
@@ -56,4 +56,4 @@ jobs:
           body: |
             Automated latest release for commit ${{ github.sha }}.
           files: |
-            ./aceutils.zip
+            ./aceutils.tar.gz
