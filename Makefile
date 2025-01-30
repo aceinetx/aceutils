@@ -3,6 +3,8 @@ EXECUTABLES = rd md pwd touch yes no rm cat uname true false echo exsleep seq
 all: $(EXECUTABLES)
 clean:
 	rm $(EXECUTABLES)
+size:
+	@du -cb $(EXECUTABLES) | grep total$
 
 md: md.s aceutils.inc
 	fasm md.s
