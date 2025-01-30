@@ -12,8 +12,11 @@ SYS_GETCWD = 79
 SYS_MKDIR = 83
 SYS_RMDIR = 84
 SYS_UNLINK = 87
+SYS_TIME = 201
+__GETTIME_BUF_LEN = 32
 
 __NEW_UTS_LEN = 64
+
 
 macro quit {
     mov rax, SYS_EXIT

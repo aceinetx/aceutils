@@ -1,4 +1,4 @@
-EXECUTABLES = rd md pwd touch yes no rm cat uname true false echo exsleep seq arch
+EXECUTABLES = rd md pwd touch yes no rm cat uname true false echo exsleep seq arch gettime
 
 all: $(EXECUTABLES)
 clean:
@@ -51,3 +51,5 @@ seq: seq.s aceutils.inc atoi.inc itoa.inc memset.inc
 arch: arch.s aceutils.inc
 	fasm arch.s
 
+gettime: gettime.s aceutils.inc itoa.inc
+	fasm gettime.s
