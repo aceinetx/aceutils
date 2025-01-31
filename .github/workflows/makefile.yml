@@ -27,7 +27,10 @@ jobs:
         chmod +x *
         chmod -x README.md
         chmod -x LICENSE
-        tar czvf aceutils.tar.gz *
+        md ../aceutils
+        mv * ../aceutils
+        mv ../aceutils .
+        tar czvf aceutils.tar.gz aceutils
       
     - name: Upload artifact
       uses: actions/upload-artifact@v3
