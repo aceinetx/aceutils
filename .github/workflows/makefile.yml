@@ -27,9 +27,9 @@ jobs:
         chmod +x *
         chmod -x README.md
         chmod -x LICENSE
-        mkdir ../aceutils
-        mv * ../aceutils
-        mv ../aceutils .
+        mkdir ../_aceutils
+        mv * ../_aceutils
+        mv ../_aceutils ./aceutils
         tar czvf aceutils.tar.gz aceutils
       
     - name: Upload artifact
