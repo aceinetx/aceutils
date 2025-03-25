@@ -22,7 +22,7 @@ jobs:
         
     - name: Build
       run: |
-        g++ -o rebuild rebuild.cpp && ./rebuild
+        g++ -o rebuild rebuild.cpp && ./rebuild build
         rm *.s
         rm *.inc
         rm Makefile
