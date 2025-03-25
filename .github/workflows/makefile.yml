@@ -16,11 +16,11 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt install fasm
+        sudo apt install fasm build-essential
         
     - name: Build
       run: |
-        make
+        g++ -o rebuild rebuild.cpp && ./rebuild
         rm *.s
         rm *.inc
         rm Makefile
