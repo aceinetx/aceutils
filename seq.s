@@ -22,10 +22,16 @@ _start:
 	cmp qword [j], r8
 	jg .quit
 
-	mov rax, s
-	mov rdx, 32
-	mov rbx, 0
-	call aceutils_memset ;; clear the buffer before using
+	;; clear the buffer before using
+	mov dword [s], 0
+	mov dword [s+4], 0
+	mov dword [s+8], 0
+	mov dword [s+12], 0
+	mov dword [s+16], 0
+	mov dword [s+20], 0
+	mov dword [s+24], 0
+	mov dword [s+28], 0
+	mov dword [s+32], 0
 
 	mov rax, [j]
 	mov rsi, s
