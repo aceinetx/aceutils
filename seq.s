@@ -22,15 +22,11 @@ _start:
 	jg .quit
 
 	;; clear the buffer before using
-	mov dword [s], 0
-	mov dword [s+4], 0
-	mov dword [s+8], 0
-	mov dword [s+12], 0
-	mov dword [s+16], 0
-	mov dword [s+20], 0
-	mov dword [s+24], 0
-	mov dword [s+28], 0
-	mov dword [s+32], 0
+	mov qword [s], 0
+	mov qword [s+8], 0
+	mov qword [s+16], 0
+	mov qword [s+24], 0
+	mov qword [s+32], 0
 
 	mov rax, [j]
 	mov rsi, s
