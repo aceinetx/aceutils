@@ -4,7 +4,6 @@
 format ELF64 executable
 include 'aceutils.inc'
 include 'atoi.inc'
-include 'memset.inc'
 include 'itoa.inc'
 
 entry _start
